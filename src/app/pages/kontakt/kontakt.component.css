@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  justify-content: center;
+  /* margin: 0; */
+
+  /* animation: transitionIn 1000ms; */
+  animation: slide-in 600ms ease-in-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

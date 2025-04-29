@@ -1,0 +1,166 @@
+.main {
+  display: flex;
+  justify-content: center;
+  /* margin: 0; */
+
+  animation: slide-from-left 600ms ease-in-out;
+}
+
+.container {
+  width: 65vw;
+  float: right;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.button-container-small {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  animation: slide-from-right 600ms ease-in-out;
+}
+
+.button-container-small button {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  padding: 10px;
+  color: wheat;
+  font-size: 1vw;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 65vw;
+  gap: 50px;
+  margin-top: 5vh;
+
+  animation: slide-from-right 600ms ease-in-out;
+}
+
+.button-container button {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  padding: 10px;
+  color: wheat;
+  font-size: 3vw;
+}
+
+.button-container button:hover {
+  color: white;
+}
+
+.button-container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  width: 65vw;
+  gap: 50px;
+  margin-top: 5vh;
+
+  animation: slide-from-top 600ms ease-in-out;
+}
+
+.button-container-right button {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  padding: 10px;
+  color: wheat;
+  font-size: 3vw;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  width: 40vw;
+  height: 30vh;
+  /* border: 1px solid #ccc; */
+  margin: auto;
+
+  animation: slide-from-bottom 600ms ease-in-out;
+}
+
+.slider-container button {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  padding: 10px;
+  color: wheat;
+  font-size: 3vw;
+}
+
+.item {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: absolute;
+}
+
+.item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.nav-button:first-of-type {
+  left: 10px;
+}
+
+.nav-button:last-of-type {
+  right: 10px;
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

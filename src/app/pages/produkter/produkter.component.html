@@ -1,0 +1,43 @@
+<div class="main">
+  <h1>produkter</h1>
+</div>
+
+<!-- <div *ngIf="showingItems" class="button-container-small">
+  <button mat-button (click)="showItems('IPA')">ipa</button>
+  <button mat-button (click)="showItems('APA')">apa</button>
+  <button mat-button (click)="showItems('RESTEN')">resten</button>
+</div> -->
+
+<div class="container">
+
+  <div *ngIf="!showingItems" class="button-container">
+    <button mat-button (click)="showItems('IPA')">ipa</button>
+    <button mat-button (click)="showItems('APA')">apa</button>
+    <button mat-button (click)="showItems('RESTEN')">resten</button>
+  </div>
+
+  <div *ngIf="showingItems" class="button-container-right">
+    <button mat-button (click)="showItems('IPA')">ipa</button>
+    <button mat-button (click)="showItems('APA')">apa</button>
+    <button mat-button (click)="showItems('RESTEN')">resten</button>
+  </div>
+
+  <!-- <div *ngIf="activeItems.length > 0">
+    <p>test</p>
+  </div> -->
+
+
+  <div class="slider-container" *ngIf="activeItems.length > 0">
+    <button mat-button class="nav-button" (click)="prevItem()">&#10094;</button>
+    <div
+      class="item"
+      *ngFor="let item of activeItems;
+      let i = index" [class.active]="i === currentIndex"
+      (click)="openModal(item)"
+    >
+      <p>{{ item }}</p>
+    </div>
+    <button mat-button class="nav-button" (click)="nextItem()">&#10095;</button>
+  </div>
+
+</div>

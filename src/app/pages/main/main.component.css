@@ -1,0 +1,63 @@
+.main {
+  display: flex;
+  justify-content: center;
+
+  animation: slide-from-left 600ms ease-in-out;
+}
+
+.container {
+  /* margin-right: 8vw; */
+  display: flex;
+  justify-content: center;
+
+  animation: slide-from-right 600ms ease-in-out;
+}
+
+.boxes {
+  float: right;
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boxL {
+  width: 25vw;
+  animation: slide-from-right 600ms ease-in-out;
+}
+
+.boxR {
+  width: 25vw;
+  animation: slide-from-right 600ms ease-in-out;
+}
+
+.main-p {
+  font-size: 1vw;
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

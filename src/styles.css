@@ -1,4 +1,30 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
+  user-select: none;
+  background-image: url('assets/images/bkg4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Poppins', serif;
+  font-size: 7vw;
+  font-weight: 100;
+  margin: 0;
+  color: wheat;
+}
+
+p {
+  font-family: "Poppins", serif;
+  font-size: 1.5vw;
+  font-weight: 100;
+  color: wheat;
+}
+
+.mat-mdc-icon-button:hover .mat-mdc-button-persistent-ripple::before {
+  opacity: 1;
+  background-color: red;
 }
